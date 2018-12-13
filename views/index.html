@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coding for C and Java</title>
+    <!--CDN for Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!--Font Awesome for Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!--Google Fonts for styling the text-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <!--Linking the style sheet using Link Tag-->
+    <link rel="stylesheet" type="text/css" href="../styles/index.css">
+</head>
+<body onload="return selectProgram('C', 'PALINDROME')">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <a class="brand" href="/index.html">CJ&amp;C</a>
+            </div>
+            <div class="social-icons col-lg-6 ml-auto col-md-6 col-sm-6 col-xs-12">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/msandeepsunny" target="_blank" class="fb">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/sandeep-menta-7a76a391/" target="_blank" class="linked-in">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/u/0/103978073328210489230" target="_blank" class="google-plus">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <a class="navbar-brand" href="/" id="brand">CJ&amp;C</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" id="navLink">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#programs">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="home">
+        <div class="row">
+            <div class="col-lg-2 col-xs-12 cover-photo">
+                <img src="../images/cover.jpg">
+            </div>
+            <div class="col-lg-10 col-xs-12 content">
+                <h1>Hi, Hitesh</h1>
+                <p>This is Sandeep. I am Angular Developer, working at InCred from Bangalore. I made this website using HTML,
+                    CSS, Bootstrap, JavaScript and jQuery. I started my career as a FrontEnd Developer in a Startup Company.
+                    I am good in Scss, Sass and making responsive websites using pure CSS. I am a big fan for your tutorials.
+                    I am not a premium subscriber for
+                    <a href="https://www.learncodeonline.in/" target="_blank">
+                        <strong>Learning Code Online</strong>
+                    </a>. This is my Small Introduction about me. You can contact me using social links provided in the site.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container programs" id="programs">
+        <div class="row">
+            <h3 class="title">Programs</h3>
+            <div class="col-lg-12">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                    onclick="return selectProgram('C', 'PALINDROME')">
+                                    Palinndorme Number
+                                    <i class="fas fa-angle-down icons"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <h4>Algorithm for Palindrome</h4>
+                                <div id="algorithmOfC"></div>
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#home" onclick="return selectProgram('C', 'PALINDROME')">C Language</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#menu1" onclick="return selectProgram('JAVA', 'PALINDROME')">Java</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div id="home" class="container tab-pane active">
+                                        <code id="cCode"></code>
+                                        <div class="output">
+                                            <h3>Output:</h3>
+                                            <output id="cOutput"></output>
+                                        </div>
+                                    </div>
+                                    <div id="menu1" class="container tab-pane fade">
+                                        <code id="javaCode"></code>
+                                        <div class="output">
+                                            <h3>Output:</h3>
+                                            <output id="javaOutput"></output>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                        onclick="return selectProgram('C', 'FIBONACCI')">
+                                        Fibonacci Series
+                                        <i class="fas fa-angle-down icons"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h4>Algorithm for Fibonacci Series</h4>
+                                    <div id="algorithmTwo"></div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#fibonacciC" onclick="return selectProgram('C', 'FIBONACCI')">C Language</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#fibonacciJava" onclick="return selectProgram('JAVA', 'FIBONACCI')">Java</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="fibonacciC" class="container tab-pane active">
+                                            <code id="cFibonacciCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="fibonacciCOutput"></output>
+                                            </div>
+                                        </div>
+                                        <div id="fibonacciJava" class="container tab-pane fade">
+                                            <code id="javaFibonacciCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="fibonacciJavaOutput"></output>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                        onclick="return selectProgram('C', 'FACTORIAL')">
+                                        Factorial Number
+                                        <i class="fas fa-angle-down icons"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h4>Algorithm for Factorial of a Number</h4>
+                                    <div id="algorithmThree"></div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#factorialC" onclick="return selectProgram('C', 'FACTORIAL')">C Language</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#factorialJava" onclick="return selectProgram('JAVA', 'FACTORIAL')">Java</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="factorialC" class="container tab-pane active">
+                                            <code id="cFactorialCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="factorialCOutput"></output>
+                                            </div>
+                                        </div>
+                                        <div id="factorialJava" class="container tab-pane fade">
+                                            <code id="javaFactorialCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="factorialJavaOutput"></output>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                                        onclick="return selectProgram('C', 'BUBBLE_SORT')">
+                                        Bubble Sort
+                                        <i class="fas fa-angle-down icons"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h4>Algorithm for Bubble Sort</h4>
+                                    <div id="algorithmFour"></div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#bubbleC" onclick="return selectProgram('C', 'BUBBLE_SORT')">C Language</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#bubbleJava" onclick="return selectProgram('JAVA', 'BUBBLE_SORT')">Java</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="bubbleC" class="container tab-pane active">
+                                            <code id="cBubbleCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="bubbleCOutput"></output>
+                                            </div>
+                                        </div>
+                                        <div id="bubbleJava" class="container tab-pane fade">
+                                            <code id="javaBubbleCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="bubbleJavaOutput"></output>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                                        onclick="return selectProgram('C', 'THIRD_LARGEST')">
+                                        Find 3RD Largest Number In An Array
+                                        <i class="fas fa-angle-down icons"></i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h4>Algorithm for 3rd Largest Number In Array</h4>
+                                    <div id="algorithmFive"></div>
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#thirdLargestC" onclick="return selectProgram('C', 'THIRD_LARGEST')">C Language</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#thirdLargestJava" onclick="return selectProgram('JAVA', 'THIRD_LARGEST')">Java</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="thirdLargestC" class="container tab-pane active">
+                                            <code id="cThirdLargestCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="thirdLargestCOutput"></output>
+                                            </div>
+                                        </div>
+                                        <div id="thirdLargestJava" class="container tab-pane fade">
+                                            <code id="javaThirdLargestCode"></code>
+                                            <div class="output">
+                                                <h3>Output:</h3>
+                                                <output id="thirdLargestJavaOutput"></output>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid contact" id="contact">
+        <div class="row">
+            <h3 class="title">Contact</h3>
+            <div class="col-lg-12 col-sm-6 col-xs-12">
+                <div class="col-lg-6 col-sm-6 col-xs-12 contact-numbers">
+                    <p>Mobile Number:
+                        <a href="tel:+91-8548019630">+91 8548019630</a>
+                    </p>
+                    <p>Alternate Mobile Number:
+                        <a href="tel:+91-9182313530">+91 9182313530</a>
+                    </p>
+                    <p>Email Id:
+                        <a href="mailto:sandeepmenta172@gmail.com">sandeepmenta172@gmail.com</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-6 address col-xs-12">
+                    <p>Address</p>
+                    <p>Dr.No: 202, Palm Meadows,</p>
+                    <p>Ramagondanahalli Bus Stop,</p>
+                    <p>Bangalore - 560066</p>
+                </div>
+            </div>
+        </div>
+        <div class="container maps">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7776.283379773267!2d77.73585207628358!3d12.962783868889302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae120580b51d13%3A0x7f39487a31d7376c!2sPalm+Meadows%2C+Whitefield%2C+Bengaluru%2C+Karnataka+560066!5e0!3m2!1sen!2sin!4v1529926162755"
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/JavaScript" src="../scripts/index.js"></script>
+</body>
+
+</html>

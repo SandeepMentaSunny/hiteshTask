@@ -1,0 +1,167 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+a.brand{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.social-icons{
+    margin: 15px auto;
+}
+.social-icons ul{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+.social-icons ul li{
+    float: left;
+    padding: 0 10px 0 0;
+}
+.social-icons ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.fb, .linked-in, .google-plus{
+    background: #4867aa;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.linked-in{
+    background: #0373b3;
+    padding: 10px 12px;
+}
+.google-plus{
+    background: #dd5346;
+    padding: 10px;
+}
+header, nav{
+    background: dodgerblue !important;
+    color: #fff;
+}
+a.fb:hover, a.linked-in:hover, a.google-plus:hover{
+    background: #fff;
+}
+a.fb:hover i{
+    color: #4867aa;
+}
+a.linked-in:hover i{
+    color: #0373b3;
+}
+a.google-plus:hover i{
+    color: #dd5346;
+}
+.active{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700 !important;
+}
+.nav-link{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+}
+.cover-photo, .content{
+    margin: 30px 0 0;
+}
+.cover-photo img{
+    box-shadow: 4px 4px #888;
+}
+.content p{
+    text-indent: 60px;
+}
+.programs{
+    margin: 40px auto;
+}
+.title{
+    text-align: center;
+    display: table;
+    margin: 25px auto 35px;
+    float: none;
+}
+.btn-link{
+    width: 100%;
+    text-align: left;
+}
+.icons{
+    float: right;
+}
+.nav-tabs .nav-item .nav-link{
+    color: #007bff;
+}
+.tab-pane h3{
+    color: #000;
+}
+.tab-pane p{
+    color: #000;
+}
+.contact{
+   background: dodgerblue;
+   color: #fff;
+   height: 500px;
+}
+.contact-numbers{
+    color: #fff;
+    float: left;
+}
+.contact-numbers p a{
+    color: #fff;
+}
+.address{
+    float: right;
+    text-align: right;
+}
+.address p{
+    color: #fff;
+}
+.maps .row .col-lg-12 iframe{
+    width: 100%;
+    height: 157%;
+}
+
+.navbar-dark .navbar-brand{
+    font-weight: 700;
+    font-size: 25px;
+    display: none;
+}
+.card output{
+    color: #000;
+}
+@media only screen and (max-width: 676px){
+    .contact{
+        height: 511px;
+    }
+}
+@media only screen and (max-width: 577px){
+    .contact{
+        height: 660px;  
+    }
+    .col-xs-12{
+        margin: 10px auto;
+        float: none;
+        text-align: center;
+    }
+    header{
+        height: 120px;
+    }
+    .social-icons ul{
+        float: none;
+        display: table;
+        margin: 20px auto;
+    }
+}
+.content p{
+    text-align: justify;
+}
+.output{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+}
